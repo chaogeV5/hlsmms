@@ -1,0 +1,164 @@
+
+
+/* 公共样式 */
+body{
+    font-size: 14px;
+}
+html,body,#app,#loginbox,#home,.el-aside{
+    height:100%;
+    margin:0;
+  }
+ .el-aside{
+    min-height:100%;
+   
+  }
+a{
+    color:#fff;
+    text-decoration:none;
+}
+
+
+/* --------------------------------------------左侧--------------------------------------------- */
+/* 左侧顶部标题样式 */
+#leftTitle{
+    color: #fff;
+}
+
+#leftTitle h2,#leftTitle p{
+    text-align: right;
+    padding-right: 20px;
+}
+
+#leftTitle h2{
+    font-size: 24px;
+    padding-bottom: 30px;
+}
+
+/* 左侧栏 */
+.el-aside {
+  color: #333;
+  background: url("../images/leftBG.png") repeat-y;
+}
+
+/* 菜单 */
+.el-menu{
+  background-color: transparent;
+  border: none;
+  width: 206px;
+  margin-left: 24px;
+}
+
+/* 子菜单 */
+.el-menu--inline{
+  margin-left: 0px;
+}
+
+/* 子菜单的行高和高度 */
+.el-submenu .el-menu-item{
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px 0px 0px 5px;
+    text-align: right;
+    padding: 0px 20px;
+    color: #aaa;
+    margin-bottom: 5px;
+}
+
+/* 鼠标经过和焦点样式 */
+.el-menu-item:hover, .el-menu-item:focus{
+    /* color:#58a100; */
+    color:#fff;
+    background-color: rgba(58, 163, 37,.5);
+}
+/* 激活的样式 */
+.el-menu-item.is-active{
+    color: #fff;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* 标题 */
+.el-submenu__title{
+  height: 33px;
+  line-height: 33px;
+  text-align: right;
+  color: #fff;
+  margin-bottom: 10px;
+  background: url("../images/menuBG.png") repeat-x;
+  border-radius: 5px 0px 0px 5px;
+}
+
+/* 箭头 */
+.el-submenu__icon-arrow{
+    display: none;
+}
+
+
+
+/* --------------------------------------------右侧--------------------------------------------- */
+
+.el-header,
+.el-footer {
+  background-color: #f9f9f9;
+  color: #333;
+  height:auto !important;
+}
+
+
+.el-header{
+    padding-top: 40px;
+}
+
+.el-header h1{
+    font-size: 22px;
+    margin: 0px;
+    color: #000;
+}
+
+.el-footer p{
+    line-height: 50px;
+    border-top: 1px solid #ccc;
+    margin: 0px;
+}
+.el-main{
+    height:100%;
+    overflow-y:scroll; 
+
+}
+.el-main .el-card__header {
+   /* 渐变颜色 */
+   background: linear-gradient(#fff,#e5e5e5);
+   height: 40px;
+   line-height: 40px;
+}
+
+.el-main .el-card__header h3{
+    margin: 0px;
+}
+
+/* 库存框的样式 */
+.el-alert{
+    margin-bottom: 10px;
+}
+/* 主体内容 */
+/* flex伸缩布局 */
+#mainContent{
+    display: flex; /* 开启伸缩布局 */
+    flex-wrap: wrap; /* 自动换行 */
+}
+/* 三个子元素（RT、RM、RB）的宽度100% */
+#mainContent>*{
+    width:100%;
+    max-height:460px;
+}
+
+
+/* 修改表单元素的默认宽度100% */
+.el-input{
+    width: 30%;
+}
+
+/* 把下拉列表恢复为100% */
+.el-input--suffix{
+   width: 100%;
+}

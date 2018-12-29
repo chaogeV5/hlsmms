@@ -1,0 +1,60 @@
+<template>
+  <el-container id="home">
+    <!-- 左侧 -->
+    <leftMenu></leftMenu>
+
+    <!-- 右侧 -->
+    <el-container id="mainContent">
+      <!-- 顶部 -->
+      <rightTop></rightTop>
+      <!-- 中间 -->
+      <el-main>
+        <el-card class="box-card">
+          <div slot="header" class="clearfix">
+            <h3>密码修改</h3>
+          </div>
+          <div class="text item">
+        <!-- 模板的内容 -->
+          </div>
+        </el-card>
+      </el-main>
+      <!-- 底部 -->
+    <rightBottom></rightBottom>
+    </el-container>
+  </el-container>
+</template>
+
+<script>
+//引入组件
+import LeftMenu from "../components/leftMenu";
+import RightTop from "../components/rightTop";
+import RightBottom from "../components/rightBottom";
+export default {
+  data() {
+    return {
+      tableData: [
+        { productName: "五粮液", salesVolume: 588 },
+        { productName: "贵州茅台", salesVolume: 488 },
+        { productName: "山西汾酒", salesVolume: 688 },
+        { productName: "北京二锅头", salesVolume: 88 }
+      ],
+
+      tableData2: [
+        { productName: "剑南春", inventory: "100", operation: "入库" },
+        { productName: "泸州老窖", inventory: "200", operation: "入库" }
+      ]
+    };
+  },
+  components: {
+    //注册组件
+    LeftMenu,
+    RightTop,
+    RightBottom
+  }
+};
+</script>
+
+
+
+
+
