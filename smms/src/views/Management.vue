@@ -1,5 +1,5 @@
 
-//账号管理
+// 分类管理
 <template>
   <el-container id="home">
     <!-- 左侧 -->
@@ -13,18 +13,13 @@
       <el-main>
         <el-card class="box-card">
           <div slot="header" class="clearfix">
-            <h3>账号管理</h3>
+            <h3>分类管理</h3>
           </div>
           <div class="text item">
         <!-- 模板的内容 -->
          <el-table :data="tableData" style="width: 100%">
-              <el-table-column label="用户名称" width="180">
-                <template slot-scope="scope">
-                  <i class="el-icon-time"></i>
-                  <span style="margin-left: 10px">{{ scope.row.date }}</span>
-                </template>
-              </el-table-column>
-              <el-table-column label="用户组" width="180">
+          
+              <el-table-column label="分类名称" width="180">
                 <template slot-scope="scope">
                   <el-popover trigger="hover" placement="top">
                     <p>姓名: {{ scope.row.username }}</p>
@@ -65,22 +60,18 @@ export default {
     return {
       tableData: [
         {
-          date: "2016-05-02",
           username: "王小虎",
           address: "上海市普陀区金沙江路 555 弄"
         },
         {
-          date: "2016-05-04",
           username: "王小虎",
           address: "上海市普陀区金沙江路 1517 弄"
         },
         {
-          date: "2016-05-01",
           username: "王小虎",
           address: "上海市普陀区金沙江路 1519 弄"
         },
         {
-          date: "2016-05-03",
           username: "王小虎",
           address: "上海市普陀区金沙江路 1516 弄"
         }

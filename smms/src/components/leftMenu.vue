@@ -11,7 +11,7 @@
     </div>
     <!-- 左侧菜单 -->
     <el-menu
-      default-active="$route.path"
+      :default-active="$route.path"
       class="el-menu-vertical-demo"
       @open="handleOpen"
       @close="handleClose"
@@ -22,8 +22,8 @@
         <template slot="title">
           <span>分类管理</span>
         </template>
-        <el-menu-item index="1-1">分类管理</el-menu-item>
-        <el-menu-item index="1-2">添加分类</el-menu-item>
+        <el-menu-item index="/management"><router-link to="/management">分类管理</router-link> </el-menu-item>
+        <el-menu-item index="/addclass"><router-link to="/addclass">添加分类</router-link> </el-menu-item>
       </el-submenu>
       <!-- 第二个子菜单 -->
       <el-submenu index="2">
@@ -38,8 +38,8 @@
         <template slot="title">
           <span>进货管理</span>
         </template>
-        <el-menu-item index="3-1">库存管理</el-menu-item>
-        <el-menu-item index="3-2">添加库存</el-menu-item>
+        <el-menu-item index="/inventory"><router-link to="/inventory">库存管理</router-link> </el-menu-item>
+        <el-menu-item index="/addinventory"><router-link to="/addinventory">添加库存</router-link> </el-menu-item>
       </el-submenu>
       <!-- 第四个子菜单 -->
       <el-submenu index="4">
@@ -55,16 +55,16 @@
         <template slot="title">
           <span>统计管理</span>
         </template>
-        <el-menu-item index="5-1">销售统计</el-menu-item>
-        <el-menu-item index="5-2">进货统计</el-menu-item>
+        <el-menu-item index="/salesinfo"><router-link to="/salesinfo">销售统计</router-link> </el-menu-item>
+        <el-menu-item index="/stockinfo"><router-link to="/stockinfo">进货统计</router-link> </el-menu-item>
       </el-submenu>
       <!-- 第六个子菜单 -->
       <el-submenu index="6">
         <template slot="title">
           <span>账号管理</span>
         </template>
-        <el-menu-item index="/useradd"><router-link to="/useradd">账号管理</router-link></el-menu-item>
-        <el-menu-item index="/userlist"><router-link to="/userlist">添加账号</router-link></el-menu-item>
+        <el-menu-item index="/userlist"><router-link to="/userlist">账号管理</router-link></el-menu-item>
+        <el-menu-item index="/useradd"><router-link to="/useradd">添加账号</router-link></el-menu-item>
         <el-menu-item index="/userpwdedit"><router-link to="/userpwdedit">密码修改</router-link></el-menu-item>
       </el-submenu>
       <!-- 第七个子菜单 -->

@@ -1,3 +1,5 @@
+
+//添加账号
 <template>
   <el-container id="home">
     <!-- 左侧 -->
@@ -11,7 +13,7 @@
       <el-main>
         <el-card class="box-card">
           <div slot="header" class="clearfix">
-            <h3>添加用户</h3>
+            <h3>添加管理员账号</h3>
           </div>
           <div class="text item">
         <!-- 模板的内容 -->
@@ -76,9 +78,6 @@ export default {
     return {
       //数据对象
       ruleForm2: {
-        pass: "",
-        username: "",
-        passCheck: "",
         usergroup: ''
       },
       //验证规则

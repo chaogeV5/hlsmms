@@ -1,5 +1,5 @@
 
-//密码修改
+//添加分类
 <template>
   <el-container id="home">
     <!-- 左侧 -->
@@ -13,10 +13,20 @@
       <el-main>
         <el-card class="box-card">
           <div slot="header" class="clearfix">
-            <h3>账号密码修改</h3>
+            <h3>系统信息</h3>
           </div>
           <div class="text item">
             <!-- 模板的内容 -->
+            <el-select v-model="value" placeholder="请选择">
+              <el-option
+                v-for="item in options"
+                :key="item.value"
+                :label="item.label"
+                :value="item.value"
+              ></el-option>
+            </el-select>
+
+            <!--  -->
             <el-form
               :model="ruleForm2"
               status-icon
@@ -26,20 +36,17 @@
               class="demo-ruleForm"
               label-position="top"
             >
-              <el-form-item label="原始密码" prop="oldpwd">
-                <el-input type="password" v-model="ruleForm2.oldpwd" autocomplete="off"></el-input>
-              </el-form-item>
 
-              <el-form-item label="密码" prop="pass">
-                <el-input type="password" v-model="ruleForm2.pass" autocomplete="off"></el-input>
-              </el-form-item>
-
-              <el-form-item label="确认密码" prop="passCheck">
-                <el-input type="password" v-model="ruleForm2.passCheck" autocomplete="off"></el-input>
+              <el-form-item label="分类名称：" prop="usergroup">
+                <el-select v-model="ruleForm2.usergroup" placeholder="请选择">
+                  <el-option label="烟酒" value="烟酒"></el-option>
+                  <el-option label="食品" value="食品"></el-option>
+                  <el-option label="孕婴" value="孕婴"></el-option>
+                </el-select>
               </el-form-item>
 
               <el-form-item>
-                <el-button type="primary" @click="submitForm('ruleForm2')">修改</el-button>
+                <el-button type="primary" @click="submitForm('ruleForm2')">登录</el-button>
               </el-form-item>
             </el-form>
           </div>
@@ -58,16 +65,31 @@ import RightTop from "../components/rightTop";
 import RightBottom from "../components/rightBottom";
 export default {
   data() {
-    //自定义验证2次密码是否一致
-    var validatePassword = (rule, value, callback) => {
-      if (value !== this.ruleForm2.pass) {
-        callback(new Error("两次输入密码不一致!"));
-      } else {
-        callback();
-      }
-    };
-    //返回的数据
     return {
+      options: [
+        {
+          value: "选项1",
+          label: "五粮液"
+        },
+        {
+          value: "选项2",
+          label: "贵州茅台"
+        },
+        {
+          value: "选项3",
+          label: "泸州老窖"
+        },
+        {
+          value: "选项4",
+          label: "山西汾酒"
+        },
+        {
+          value: "选项5",
+          label: "剑南春"
+        }
+      ],
+      value: "",
+
       //数据对象
       ruleForm2: {
         pass: "",
@@ -77,28 +99,10 @@ export default {
       },
       //验证规则
       rules2: {
-       
-        pass: [
-          { required: true, trigger: "blur", message: "密码必须填写" },
-          {
-            min: 6,
-            max: 12,
-            message: "密码长度在 6 到 12 个字符",
-            trigger: "blur"
-          }
-        ],
-        passCheck: [
-          { required: true, trigger: "blur", message: "确认密码必须填写" },
-          {
-            min: 6,
-            max: 12,
-            message: "确认密码长度在 6 到 12 个字符",
-            trigger: "blur"
-          },
-          //调用自定义的验证方法验证两次密码是否一致
-          { validator: validatePassword, trigger: "blur" }
-        ],
-      
+
+        usergroup: [
+          { required: true, trigger: "change", message: "请选择用户组" }
+        ]
       }
     };
   },
