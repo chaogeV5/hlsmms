@@ -76,12 +76,12 @@ export default {
         { productName: "五粮液", salesVolume: 588 },
         { productName: "贵州茅台", salesVolume: 488 },
         { productName: "山西汾酒", salesVolume: 688 },
-        { productName: "北京二锅头", salesVolume: 88 }
+        { productName: "北京二锅头", salesVolume: 188 }
       ],
 
       tableData2: [
-        { productName: "剑南春", inventory: "100", operation: "入库" },
-        { productName: "泸州老窖", inventory: "200", operation: "入库" }
+        { productName: "剑南春", inventory: "1000", operation: "入库" },
+        { productName: "泸州老窖", inventory: "2000", operation: "入库" }
       ]
     };
   },
