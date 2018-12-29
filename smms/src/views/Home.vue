@@ -80,8 +80,8 @@ export default {
       ],
 
       tableData2: [
-        { productName: "剑南春", inventory: "1000", operation: "入库" },
-        { productName: "泸州老窖", inventory: "2000", operation: "入库" }
+        { productName: "剑南春", inventory: "100", operation: "入库" },
+        { productName: "泸州老窖", inventory: "200", operation: "入库" }
       ]
     };
   },
